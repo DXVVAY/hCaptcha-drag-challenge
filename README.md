@@ -7,6 +7,7 @@ https://t.me/dexv0
 
 > [!CAUTION]
 > This challenge is probs just a PoC and they might remove it!
+
 > Average solve time is around 0.5-0.8 s :D
 
 ## Usage

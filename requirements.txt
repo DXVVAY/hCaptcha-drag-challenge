@@ -1,0 +1,7 @@
+base64
+requests
+opencv-python
+numpy
+fastapi
+pydantic
+datetime

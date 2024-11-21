@@ -1,4 +1,4 @@
-import base64, httpx, numpy, cv2, time
+import base64, requests, numpy, cv2, time
 from utils import *
 
 class DragDrop:
@@ -8,8 +8,8 @@ class DragDrop:
         self.captcha = captcha
 
     def encode_img(self, url: str, np: bool = False) -> str:
-        if np: return cv2.imdecode(numpy.frombuffer(httpx.get(url).content, numpy.uint8), cv2.IMREAD_ANYCOLOR)
-        else: return base64.b64encode(httpx.get(url).content).decode()
+        if np: return cv2.imdecode(numpy.frombuffer(requests.get(url).content, numpy.uint8), cv2.IMREAD_ANYCOLOR)
+        else: return base64.b64encode(requests.get(url).content).decode()
 
     def solve(self) -> dict:
         solvers = {
